@@ -20,7 +20,7 @@ const UsersList = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/users');
+        const response = await axios.get('https://mern-final-5a7r.onrender.com/users');
         setUsers(response.data);
       } catch (err) {
         setError('Failed to fetch users');
@@ -59,7 +59,7 @@ const UsersList = () => {
     try {
       const userIds = selectedUsers.join(','); 
       const response = await axios.get(
-        `http://localhost:5001/mark-attendance?subject=${selectedSubject}&date=${currentDate}&userIds=${userIds}`
+        `https://mern-final-5a7r.onrender.com/mark-attendance?subject=${selectedSubject}&date=${currentDate}&userIds=${userIds}`
       );
       alert(response.data.message); 
     } catch (error) {
