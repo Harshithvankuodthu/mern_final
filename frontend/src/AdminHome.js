@@ -12,8 +12,8 @@ const UsersList = () => {
     const fetchUsers = async () => {
       try {
         const [usersResponse, facultyResponse] = await Promise.all([
-          axios.get('http://localhost:5001/users'), 
-          axios.get('http://localhost:5001/faculty'), 
+          axios.get('https://mern-final-5a7r.onrender.com/users'), 
+          axios.get('https://mern-final-5a7r.onrender.com/faculty'), 
         ]);
         setUsers(usersResponse.data); 
         setFaculty(facultyResponse.data); 
