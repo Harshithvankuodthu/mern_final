@@ -9,7 +9,7 @@ const AttendanceList = () => {
   useEffect(() => {
     const fetchAttendance = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/attendance');
+        const response = await axios.get('https://mern-final-5a7r.onrender.com/attendance');
         
         const today = new Date().toLocaleDateString('en-GB', {
           weekday: 'short', year: 'numeric', month: 'short', day: 'numeric'
