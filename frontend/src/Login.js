@@ -13,7 +13,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.get(`http://localhost:5001/login?email=${email}&password=${password}`);
+      const response = await axios.get(`https://mern-final-5a7r.onrender.com/login?email=${email}&password=${password}`);
 
       if (response.data.userId) {
         localStorage.setItem('userId', response.data.userId);
