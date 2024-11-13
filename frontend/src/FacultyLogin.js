@@ -13,7 +13,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.get(`http://localhost:5001/flogin?email=${email}&password=${password}`);
+      const response = await axios.get(`https://mern-final-5a7r.onrender.com/flogin?email=${email}&password=${password}`);
 
       if (response.data.facultyId) {
         localStorage.setItem('facultyId', response.data.facultyId); 
