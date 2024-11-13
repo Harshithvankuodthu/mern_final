@@ -14,7 +14,7 @@ const Register = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.get('http://localhost:5001/register', {
+      const response = await axios.get('https://mern-final-5a7r.onrender.com/register', {
         params: {
           name,
           email,
